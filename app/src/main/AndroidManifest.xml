@@ -12,9 +12,8 @@
         <activity android:name=".MainActivity">
         </activity>
         <activity
-            android:name=".activities.LoginActivity"
-            android:theme="@style/NoPreview"
-            android:windowSoftInputMode="adjustPan">
+            android:name=".MainEmptyActivity"
+            android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -22,7 +21,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SignUpActivity">
+            android:name=".activities.LoginActivity"
+            android:theme="@style/NoPreview"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity android:name=".activities.SignUpActivity">
         </activity>
         <activity
             android:name=".activities.ForgotPasswordActivity"
