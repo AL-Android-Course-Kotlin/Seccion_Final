@@ -47,7 +47,11 @@ class LoginActivity : AppCompatActivity() {
     private fun logInByEmail(email: String, password: String) {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
-                toast("User is now logged in.")
+                if(mAuth.currentUser!!.isEmailVerified) {
+                    toast("User is now logged in.")
+                } else {
+                    toast("User must confirm email first")
+                }
             } else {
                 toast("An unexpected error occurred, please try again.")
             }
