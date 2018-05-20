@@ -13,5 +13,8 @@
     <string name="login_create_account">Create a new account</string>
     <string name="login_go_login">Go back to Login</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
