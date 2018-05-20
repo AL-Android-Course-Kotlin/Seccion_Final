@@ -9,14 +9,10 @@ import com.alejandrolora.finalapp.fragments.ChatFragment
 import com.alejandrolora.finalapp.fragments.InfoFragment
 import com.alejandrolora.finalapp.fragments.RatesFragment
 import com.alejandrolora.mylibrary.ToolbarActivity
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : ToolbarActivity() {
 
-    private val mAuth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
-
-    private lateinit var adapter: PagerAdapter
     private var prevBottomSelected: MenuItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,10 +26,10 @@ class MainActivity : ToolbarActivity() {
     }
 
     private fun getPagerAdapter(): PagerAdapter {
-        adapter = PagerAdapter(supportFragmentManager)
-        adapter.addFragment(ChatFragment())
+        val adapter = PagerAdapter(supportFragmentManager)
         adapter.addFragment(InfoFragment())
         adapter.addFragment(RatesFragment())
+        adapter.addFragment(ChatFragment())
         return adapter
     }
 
