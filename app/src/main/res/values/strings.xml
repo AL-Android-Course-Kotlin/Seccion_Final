@@ -18,5 +18,7 @@
     <string name="navigation_bottom_rates">Rates</string>
     <string name="navigation_bottom_chat">Chat</string>
 
+    <string name="chat_edittext_message_hint">Type here a message...</string>
+
 
 </resources>
