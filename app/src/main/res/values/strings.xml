@@ -20,5 +20,8 @@
 
     <string name="chat_edittext_message_hint">Type here a message...</string>
 
+    <string name="info_label_messages">Total messages</string>
+    <string name="info_no_name">Name is not available</string>
+
 
 </resources>
