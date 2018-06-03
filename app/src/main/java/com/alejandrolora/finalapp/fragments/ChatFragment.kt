@@ -11,7 +11,9 @@ import android.view.ViewGroup
 import com.alejandrolora.finalapp.R
 import com.alejandrolora.finalapp.adapters.ChatAdapter
 import com.alejandrolora.finalapp.models.Message
+import com.alejandrolora.finalapp.models.TotalMessagesEvent
 import com.alejandrolora.finalapp.toast
+import com.alejandrolora.finalapp.utils.RxBus
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.*
@@ -111,6 +113,7 @@ class ChatFragment : Fragment() {
                             messageList.addAll(messages.asReversed())
                             adapter.notifyDataSetChanged()
                             _view.recyclerView.smoothScrollToPosition(messageList.size)
+                            RxBus.publish(TotalMessagesEvent(messageList.size))
                         }
                     }
                 })

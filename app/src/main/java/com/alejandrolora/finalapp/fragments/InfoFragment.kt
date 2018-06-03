@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.alejandrolora.finalapp.R
+import com.alejandrolora.finalapp.models.TotalMessagesEvent
 import com.alejandrolora.finalapp.toast
 import com.alejandrolora.finalapp.utils.CircleTransform
+import com.alejandrolora.finalapp.utils.RxBus
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.*
@@ -37,7 +39,10 @@ class InfoFragment : Fragment() {
         setUpCurrentUserInfoUI()
 
         // Total Messages Firebase Style
-        subscribeToTotalMessagesFirebaseStyle()
+        // subscribeToTotalMessagesFirebaseStyle()
+
+        // Total Messages Event Bus + Reactive Style
+        subscribeToTotalMessagesEventBusReactiveStyle()
 
         return _view
     }
@@ -73,6 +78,12 @@ class InfoFragment : Fragment() {
 
                 querySnapshot?.let { _view.textViewInfoTotalMessages.text = "${it.size()}" }
             }
+        })
+    }
+
+    private fun subscribeToTotalMessagesEventBusReactiveStyle() {
+        RxBus.listen(TotalMessagesEvent::class.java).subscribe({
+            _view.textViewInfoTotalMessages.text = "${it.total}"
         })
     }
 
