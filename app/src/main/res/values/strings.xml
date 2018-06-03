@@ -23,5 +23,7 @@
     <string name="info_label_messages">Total messages</string>
     <string name="info_no_name">Name is not available</string>
 
+    <string name="options_menu_log_out">Log out</string>
+
 
 </resources>
