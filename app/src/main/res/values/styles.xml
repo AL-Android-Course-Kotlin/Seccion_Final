@@ -17,4 +17,10 @@
         <item name="android:windowDisablePreview">true</item>
     </style>
 
+    <style name="custom_rating_bar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_custom</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+    </style>
+
 </resources>

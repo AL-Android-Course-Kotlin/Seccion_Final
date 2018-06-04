@@ -14,9 +14,4 @@ class RatesFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_rates, container, false)
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-    }
-
 }
