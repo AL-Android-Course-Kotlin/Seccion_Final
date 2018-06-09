@@ -5,7 +5,7 @@
     <color name="colorAccent">#4797AB</color>
     <color name="colorAccentDark">#387888</color>
     <color name="colorPrimaryText">#FFFFFF</color>
-    <color name="colorSecondaryText">#BDBDBD</color>
+    <color name="colorSecondaryText">#bdbdbd</color>
     <color name="colorTextBlack">#222</color>
     <color name="colorIcon">#FFFFFF</color>
     <color name="colorDivider">#BDBDBD</color>
